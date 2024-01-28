@@ -3,7 +3,9 @@
 @import url('./pages.css');
 
 :root {
-    --bg-color: #fff;
+    --bg-color: #0b0b0b;
+    --component-default-color: transparent;
+    --primary: #fff;
     --font-color: #fff;
 }
 
@@ -11,8 +13,32 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    --outline: 0.10px solid red;
+}
+
+body {
+    overflow: hidden;
+}
+
+main {
+    overflow-y: scroll;
+    background-color: var(--bg-color);
+}
+
+.app {
+    display: grid;
+    height: 100dvh;
+    grid-template-columns: 1.5fr 6fr;
+    background-color: var(--bg-color);
 }
 
 .hidden {
     display: none;
 }
+
+.max-size {
+    width: 100%;
+    height: 100%;
+}
+
+/* animation */
