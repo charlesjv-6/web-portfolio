@@ -6,12 +6,13 @@ import Expand from "../assets/icons/Expand.svg";
 import Collapse from "../assets/icons/Collapse.svg";
 
 export default function Menu({ parent, parentIcon, parentLink, child }) {
+    // for collapsing and expanding menu items
     const [isOpen, setIsOpen] = useState(false);
-
     const toggleMenu = () => {
         setIsOpen(!isOpen);
     };
 
+    // return the Menu component
     return (
         <div className="menu-list">
             <span onClick={toggleMenu}>
@@ -35,6 +36,7 @@ export default function Menu({ parent, parentIcon, parentLink, child }) {
     );
 }
 
+// define the props type
 Menu.propTypes = {
     parent: PropTypes.string.isRequired,
     parentIcon: PropTypes.element,
@@ -47,6 +49,7 @@ Menu.propTypes = {
     )
 };
 
+// define the default prop values
 Menu.defaultProps = {
     parent: 'Menu Item',
     parentIcon: Bullet,

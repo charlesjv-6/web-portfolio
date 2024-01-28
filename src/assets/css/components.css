@@ -55,8 +55,8 @@
     height: fit-content;
     border: 1px solid var(--primary);
     color: var(--font-color);
-
     --old-price: #911313;
+    --price:  #00ff15;
 }
 
 .card header {
@@ -67,7 +67,7 @@
 
 .card header .price-tag{
     text-align: end;
-    color: #00ff15;
+    color: var(--price);
     font-size: 18px;
 }
 .card .price-tag p:nth-child(1){
