@@ -29,7 +29,7 @@ export default function SideBar(){
             </header>
             <div className="side-bar-menu">
                 <Menu parent="Home" parentLink="/web-portfolio" parentIcon={Home}/>
-                <Menu parent="Categories" child={categories} parentIcon={Category}/>
+                <Menu parent="Offers" child={categories} parentIcon={Category}/>
                 <Menu parent="Portfolio" child={portfolio} parentIcon={Briefcase}/>
             </div>
             <footer>
