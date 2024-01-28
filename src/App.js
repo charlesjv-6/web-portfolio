@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './assets/css/style.css';
 import Index from './pages/index';
 import Error from './pages/error';
+import About from './pages/about';
 import SideBar from './layouts/side-bar';
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
       <BrowserRouter basename='web-portfolio'>
         <Routes>
           <Route element={<Index />} path='/' index />
+          <Route element={<About />} path='/about' />
           <Route element={<Error />} path='*' />
         </Routes>
       </BrowserRouter>

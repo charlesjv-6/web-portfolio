@@ -83,3 +83,20 @@
     padding: 5px;
     height: 50px;
 }
+
+/* skill */
+.skill {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.skill .skill-name {
+    font-size: 20px;
+}
+
+.skill .skill-date {
+    font-size: 16px;
+    font-style: italic;
+}
