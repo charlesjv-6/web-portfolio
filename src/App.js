@@ -3,6 +3,7 @@ import './assets/css/style.css';
 import Index from './pages/index';
 import Error from './pages/error';
 import About from './pages/about';
+import SearchResult from './pages/search-result';
 import SideBar from './layouts/side-bar';
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
         <Routes>
           <Route element={<Index />} path='/' index />
           <Route element={<About />} path='/about' />
+          <Route element={<SearchResult />} path='/search' />
           <Route element={<Error />} path='*' />
         </Routes>
       </BrowserRouter>

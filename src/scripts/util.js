@@ -13,4 +13,11 @@ const yearsSince = dateString => {
     return yearsPassed + ' ' + postfix;
 };
 
-export { currencyFormatter, yearsSince };
+const trunctateString = ( maxLength, text ) => {
+    if (text.length > maxLength) {
+        return text.substring(0, maxLength) + "...";
+    }
+    return text;
+};
+
+export { currencyFormatter, yearsSince, trunctateString };

@@ -100,3 +100,160 @@
     font-size: 16px;
     font-style: italic;
 }
+
+/* filter */
+.filter {
+    display: flex;
+    width: calc(100% - 30px);
+    height: 60px;
+    color: var(--primary);
+    align-items: center;
+    padding: 5px;
+    gap: 10px;
+    border: 1px solid var(--primary);
+    margin: 15px;
+    overflow-y: hidden;
+}
+
+.filter .other-filters::-webkit-scrollbar, .filter::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+.filter .other-filters::-webkit-scrollbar-track, .filter::-webkit-scrollbar-track {
+    background: var(--component-default-color); 
+}
+
+.filter .other-filters::-webkit-scrollbar-thumb, .filter::-webkit-scrollbar-thumb {
+    background: var(--primary); 
+    border-radius: 4px; 
+}
+
+.filter .other-filters::-webkit-scrollbar-thumb:hover, .filter::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+
+.filter span {
+    margin: 0 10px;
+    font-size: 18px;
+}
+
+.filter form {
+    display: flex;
+    width: fit-content;
+    gap: 10px;
+    align-items: center;
+    height: 100%;
+}
+
+.filter > form > input[type="text"] {
+    border: 1px solid var(--primary);
+    background-color: var(--component-default-color);
+    color: var(--font-color);
+    font-size: 18px;
+    padding-left: 10px;
+    width: 300px;
+    height: 45px;
+}
+
+.filter > form > input[type="submit"] {
+    border: 1px solid var(--primary);
+    background-color: var(--component-default-color);
+    color: var(--font-color);
+    font-size: 18px;
+    padding: 10px;
+    width: fit-content;
+    height: 45px;
+}
+
+.filter .other-filters {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    height: 100%;
+    width: fit-content;
+    overflow: hidden;
+}
+
+/* checkbox and radio*/
+.checkbox, .radio {
+    padding: 5px 15px 10px 15px;
+    width: fit-content;
+    height: 100%;
+}
+
+.checkbox div, .radio div {
+    display: flex;
+    flex-direction: row;
+}
+
+.checkbox span, .radio span {
+    display: grid;
+    column-gap: 5px;
+    grid-template-columns: 1fr 10fr;
+    font-size: 12px;align-items: center;
+}
+
+.checkbox legend, .radio legend {
+    font-size: 14px;
+}
+
+/* dropdown */
+.dropdown {
+    width: 150px;
+    height: 100%;
+    padding: 5px 15px;
+    font-size: 16px;
+    border: 1px solid var(--primary);
+    background-color: var(--component-default-color);
+    color: var(--font-color);
+}
+
+.dropdown:focus {
+    outline: none;
+}
+
+.dropdown:focus option {
+    color: var(--bg-color);
+    background-color: #00000013; 
+}
+
+/* range */
+.range {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    min-width: 200px;
+    gap: 5px;
+}
+
+.range > div {
+    display: flex;
+    align-items: center;
+}
+
+.range > div > input {
+    width: 100%;
+}
+
+.range > div > span {
+    font-size: 14px;
+}
+
+/* date range */
+.date-range {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    font-size: 12px;
+}
+
+.date-range p {
+    font-size: 14px;
+    width: 100%;
+}
+
+.date-range > div {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}

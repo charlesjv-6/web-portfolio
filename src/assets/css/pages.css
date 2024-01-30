@@ -28,3 +28,9 @@
 /* index */
 
 /* about */
+
+/* search result */
+.search-result {
+    display: flex;
+    flex-direction: column;
+}

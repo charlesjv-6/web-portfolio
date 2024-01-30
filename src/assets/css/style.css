@@ -41,4 +41,15 @@ main {
     height: 100%;
 }
 
+.separator-horizontal {
+    height: 100%;
+    width: 1px;
+    background-color: var(--primary);
+}
+
+.separator-vertical {
+    height: 1px;
+    width: 100%;
+    background-color: var(--primary);
+}
 /* animation */
