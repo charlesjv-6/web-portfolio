@@ -1,8 +1,9 @@
 import React from "react";
 import Button from "../components/button";
+import { currencyFormatter } from "../scripts/util";
 
 export default function DetailContainer({detailArray}){
-    const formattedPrice = detailArray.price.toLocaleString();
+    const formattedPrice = currencyFormatter.format(detailArray.price);
     return(
         <div className="detailcontainer">
             <section className="detail-section">
@@ -13,7 +14,7 @@ export default function DetailContainer({detailArray}){
             <section  className="detail-section1">
                 <div className="detail-title">
                     <h1>{detailArray.title}</h1>
-                    <h1>Php {formattedPrice}</h1>
+                    <h1>{formattedPrice}</h1>
                 </div>
                 <div   className="detail-description">
                     <p>{detailArray.description} </p>
