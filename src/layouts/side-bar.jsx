@@ -21,9 +21,6 @@ export default function SideBar(){
         { label: 'Game Projects', link: '/game-projects' },
         { label: 'Other Projects', link: '/other-projects' },
     ];
-    const detailsample =[
-        {label: 'Detail',link: '/product-detail'}
-    ]
     
     return(
         <section className="side-bar">
@@ -34,7 +31,6 @@ export default function SideBar(){
                 <Menu parent="Home" parentLink="/web-portfolio" parentIcon={Home}/>
                 <Menu parent="Offers" child={categories} parentIcon={Category}/>
                 <Menu parent="Portfolio" child={portfolio} parentIcon={Briefcase}/>
-                <Menu parent="Details" child={detailsample} parentIcon={Briefcase}/>
             </div>
             <footer>
                 <div className="social-links">

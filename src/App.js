@@ -5,7 +5,6 @@ import Error from './pages/error';
 import About from './pages/about';
 import SearchResult from './pages/search-result';
 import SideBar from './layouts/side-bar';
-import Details from './pages/details';
 
 function App() {
   return (
@@ -17,7 +16,6 @@ function App() {
           <Route element={<About />} path='/about' />
           <Route element={<SearchResult />} path='/search' />
           <Route element={<Error />} path='*' />
-          <Route element={<Details />} path='/product-detail' />
         </Routes>
       </BrowserRouter>
     </main></div>

@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Button({ onClick, type, label }) {
+export default function Button({ onClick, type=1, label='click me' }) {
     const handleClick = ()=> {
         onClick();
     }
@@ -18,5 +18,5 @@ export default function Button({ onClick, type, label }) {
             </button>
         )
     }
-    return type === '1' ? button() : deleteButton();
+    return type === 1 ? button() : deleteButton();
 }
