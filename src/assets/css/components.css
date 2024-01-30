@@ -257,3 +257,8 @@
     align-items: center;
     gap: 5px;
 }
+.regular-btn{
+    height: fit-content;
+    width: fit-content;
+    padding: 5px;
+}
