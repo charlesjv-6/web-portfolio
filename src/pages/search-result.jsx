@@ -7,6 +7,7 @@ import Header from '../components/header';
 export default function SearchResult(){
     const { search } = useLocation();
     const query = new URLSearchParams(search).get('query');
+    const foundResults = 0;
 
     const sampleFilters = [
         {
@@ -24,7 +25,15 @@ export default function SearchResult(){
     return (
         <section className='search-result'>
             <Header />
-            <Filter filters={sampleFilters}/>
+            { !foundResults > 0 &&
+                <div className='empty-result'>
+                    <span className='search-query'>'{query}'</span>
+                    <span className='result-found-count'>{foundResults} item(s) found</span>
+                </div>
+            }
+            { foundResults > 0 &&
+                <Filter filters={sampleFilters}/>
+            }
         </section>
     );
 }
