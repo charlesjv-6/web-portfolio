@@ -10,15 +10,6 @@ export default function SearchResult(){
 
     const sampleFilters = [
         {
-            filterName: "Date",
-            filterType: "date range",
-        },
-        {
-            filterName: "Brand",
-            filterType: "radio",
-            filterValues: ["Nike", "Adidas", "Puma"]
-        },
-        {
             filterName: "Price",
             filterType: "range",
             filterValues: null 

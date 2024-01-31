@@ -14,8 +14,8 @@ export default function Filter({ filters }) {
             <span>FILTER</span>
             <form action="">
                 <input type="text" placeholder="Enter Keyword" />
-                <input type="submit" value="Search" />
-                <div className="separator-horizontal" />
+                <button type="submit" onSubmit="" >Search</button>
+                <div className="separator-vertical" />
                 <div className="other-filters">
                     {filters.length > 0 &&
                         filters.map((filter, index) => {
