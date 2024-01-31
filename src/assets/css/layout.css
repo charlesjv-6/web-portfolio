@@ -92,6 +92,7 @@
     color: var(--primary);
     margin: 15px;
     border: 1px solid var(--primary);
+    background-color: var(--component-default-color);
 }
 
 .resume header {

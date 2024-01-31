@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { currencyFormatter } from "../scripts/util";
-export default  function Card({ title, description, image, price, discountedPrice }){
+export default  function Card({ id, title, description, image, price, discountedPrice }){
     // make sure the description is not too long
     if (description.length > 60) { 
         description = description.slice(0, 60) + '...'; 
@@ -11,9 +11,14 @@ export default  function Card({ title, description, image, price, discountedPric
     const formattedPrice = currencyFormatter.format(price);
     const formattedDiscountedPrice = currencyFormatter.format(discountedPrice);
 
+    // handle card click
+    const handleCardClick = () => {
+        window.location.href = `/web-portfolio/product-detail?id=${id}`;
+    }
+
     // return the card element
     return(
-        <div className="card">
+        <div className="card" onClick={()=>handleCardClick()}>
             <header>
                 <h3>{ title.toUpperCase() }</h3>
                 { price > 0 && discountedPrice > 0 && 

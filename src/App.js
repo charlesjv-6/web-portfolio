@@ -6,6 +6,7 @@ import About from './pages/about';
 import SearchResult from './pages/search-result';
 import SideBar from './layouts/side-bar';
 import Details from './pages/details';
+import Offers from './pages/offers';
 
 function App() {
   return (
@@ -15,9 +16,10 @@ function App() {
         <Routes>
           <Route element={<Index />} path='/' index />
           <Route element={<About />} path='/about' />
+          <Route element={<Offers />} path='/offers' />
           <Route element={<SearchResult />} path='/search' />
-          <Route element={<Error />} path='*' />
           <Route element={<Details />} path='/product-detail' />
+          <Route element={<Error />} path='*' />
         </Routes>
       </BrowserRouter>
     </main></div>

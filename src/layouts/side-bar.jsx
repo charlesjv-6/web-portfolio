@@ -12,9 +12,9 @@ import Logo from "../assets/images/logo.png";
 
 export default function SideBar(){
     const categories = [
-        { label: 'For Students', link: '/student-projects' },
-        { label: 'For Business', link: '/professional-projects' },
-        { label: 'Custom', link: '/custom-projects' },
+        { label: 'For Students', link: '/offers?type=students' },
+        { label: 'For Business', link: '/offers?type=business' },
+        { label: 'Custom', link: '/offers?type=custom' },
     ];
     const portfolio = [
         { label: 'Web Projects', link: '/web-projects' },

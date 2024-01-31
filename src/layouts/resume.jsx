@@ -1,5 +1,4 @@
 import React from "react";
-import { yearsSince } from "../scripts/util";
 
 import Skill from "../components/skill";
 

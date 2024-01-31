@@ -23,6 +23,7 @@ CardContainer.propTypes = {
     containerTitle: PropTypes.string,
     cardDataArray: PropTypes.arrayOf(
         PropTypes.shape({
+            id: PropTypes.string.isRequired,
             title: PropTypes.string.isRequired,
             description: PropTypes.string,
             image: PropTypes.string,
