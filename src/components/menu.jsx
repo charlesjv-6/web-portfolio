@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 
 import Bullet from '../assets/icons/Bullet.svg';
@@ -6,13 +6,20 @@ import Expand from "../assets/icons/Expand.svg";
 import Collapse from "../assets/icons/Collapse.svg";
 
 export default function Menu({ parent, parentIcon, parentLink, child }) {
-    // for collapsing and expanding menu items
-    const [isOpen, setIsOpen] = useState(false);
+    // Initialize isOpen state with the value retrieved from localStorage or default to false
+    const [isOpen, setIsOpen] = useState(localStorage.getItem(`${parent}-open-state`) === 'true' || false);
+
+    // Function to toggle menu and update localStorage
     const toggleMenu = () => {
         setIsOpen(!isOpen);
     };
 
-    // return the Menu component
+    // Update localStorage whenever isOpen state changes
+    useEffect(() => {
+        localStorage.setItem(`${parent}-open-state`, isOpen);
+    }, [isOpen]);
+
+    // Return the Menu component
     return (
         <div className="menu-list">
             <span onClick={toggleMenu}>

@@ -3,10 +3,10 @@ import ImageViewer from "../components/image-viewer";
 import { currencyFormatter, isNew } from "../scripts/util";
 
 export default function DetailContainer({ product }){
-    const { title, imageArray, discountedPrice, description, tags, dateAdded, shortDescription } = product;
+    const { title, imageArray, discountedPrice, price, description, tags, dateAdded, shortDescription } = product;
 
     // format price using the currency formatter
-    const formattedPrice = currencyFormatter.format(discountedPrice);
+    const formattedPrice = currencyFormatter.format(discountedPrice > 0 ? discountedPrice : price);
 
     return(
         <div className="detail-container">
@@ -16,19 +16,17 @@ export default function DetailContainer({ product }){
                 <div className="details">
                     <h3> {shortDescription.toUpperCase()} </h3>
                     <div>
-                        { discountedPrice > 0 && 
-                            <span>
-                                {
-                                    isNew(dateAdded) && <p style={{backgroundColor: 'var(--new)', color: 'var(--bg-color)'}}>NEW</p>
-                                }
-                                <p style={{backgroundColor: 'var(--price)'}}>{formattedPrice}</p>
-                                {
-                                    tags.map(tag => {
-                                        return <p>{ tag.toUpperCase() }</p>
-                                    })
-                                }
-                            </span>
-                        }
+                        <span>
+                            {
+                                isNew(dateAdded) && <p style={{backgroundColor: 'var(--new)', color: 'var(--bg-color)'}}>NEW</p>
+                            }
+                            <p style={{backgroundColor: 'var(--price)'}}>{formattedPrice}</p>
+                            {
+                                tags.map(tag => {
+                                    return <p>{ tag.toUpperCase() }</p>
+                                })
+                            }
+                        </span>
                     </div>
                     <div className="long-description" dangerouslySetInnerHTML={{ __html: `${ description }` }} />
                 </div>
