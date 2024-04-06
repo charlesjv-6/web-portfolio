@@ -1,21 +1,22 @@
 import React from "react";
+import { useLocation } from 'react-router-dom';
+
 import DetailContainer from "../layouts/detail-container";
+import { sampleData } from "../scripts/static-data";
 import Header from "../components/header";
+import Related from "../layouts/related";
 
 export default function Details(){
-    const sampleProduct= 
-        {
-            title: 'Product',
-            description: 'lorem Ipsum dolor sit amet, consectetur adipiscing elit',
-            image: 'https://media.istockphoto.com/id/1147544807/vector/thumbnail-image-vector-graphic.jpg?s=612x612&w=0&k=20&c=rnCKVbdxqkjlcs3xH87-9gocETqpspHFXu5dIGB4wuM=',
-            price: 15000,
-            discountedPrice: 9000
-        }
+    const { search } = useLocation();
+    const id = new URLSearchParams(search).get('id');
+
+    const sampleProduct = sampleData.find( data => data.id === id);
 
     return(
         <section>
             <Header headerTitle="Product Detail"/>
-            <DetailContainer  detailArray={sampleProduct}/>
+            <DetailContainer product={ sampleProduct }/>
+            <Related id={sampleProduct.id} tags={sampleProduct.tags}/>
         </section>
     );
 }

@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types'
 import { useNavigate  } from 'react-router-dom';
 
-export default function Header({ headerTitle }){
+export default function Header({ headerTitle, searchValue }){
     // set the website title
     document.title = headerTitle;
+    const [value, setValue] = useState(searchValue);
 
     const navigate  = useNavigate();
 
@@ -20,7 +21,7 @@ export default function Header({ headerTitle }){
         <header className='page-header'>
             <h2>{headerTitle ? headerTitle.toUpperCase() : ''}</h2>
             <form onSubmit={handleSubmit}>
-                <input type="text" name="primary-search" id="search_0" placeholder='Search...' />
+                <input type="text" name="primary-search" id="search_0" placeholder='Search...' value={value ?? null} onChange={(e)=> setValue(e.target.value)}/>
                 <button type="submit">Search</button>
             </form>
         </header>
@@ -29,7 +30,8 @@ export default function Header({ headerTitle }){
 
 // define props type
 Header.propTypes = {
-    headerTitle: PropTypes.string
+    headerTitle: PropTypes.string,
+    searchValue: PropTypes.string,
 };
 
 // define props default values

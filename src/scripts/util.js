@@ -83,9 +83,23 @@ const trunctateString = ( maxLength, text ) => {
     return text;
 };
 
+// check if the date is within a week to determine if it is new or not
+const isNew = (dateAdded) => {
+    if(!dateAdded) return false;
+
+    const today = new Date();
+    const addedDate = new Date(dateAdded);
+    const differenceInDays = (today - addedDate) / (1000 * 3600 * 24);
+
+    // if the dateAdded is within 7 days, it is NEW
+    return differenceInDays <= 7;
+};
+
+
 export { 
     currencyFormatter, 
     yearsSince, 
     trunctateString,
-    changeCurrency
+    changeCurrency,
+    isNew
 };

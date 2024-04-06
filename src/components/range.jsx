@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 
-export default function Range({ name, index }) {
-    const [value, setValue] = useState(50); // Initial value for the range input
+export default function Range({ name, index, max }) {
+    const [value, setValue] = useState(max / 2); // Initial value for the range input
 
     // Handle change in the range input
     const handleRangeChange = (event) => {
@@ -14,10 +14,12 @@ export default function Range({ name, index }) {
         <div className="range">
             <label htmlFor={`${name}_${index}`}>{name} Range:</label>
             <div>
+                <span>0</span>
                 <input
                     type="range"
                     id={`${name}_${index}`}
                     value={value}
+                    max={max}
                     onChange={handleRangeChange}
                 />
                 <span>{value}</span>

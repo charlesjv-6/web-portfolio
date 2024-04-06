@@ -10,7 +10,7 @@ export default function CardContainer({ containerTitle, cardDataArray }) {
             <div className="card-grid">
                 { cardDataArray.length > 0 &&
                     cardDataArray.map((cardData, index) => {
-                        return <Card key={index} title={cardData.title} description={cardData.description} image={cardData.image} price={cardData.price} discountedPrice={cardData.discountedPrice}/>
+                        return <Card id={cardData.id} key={index} title={cardData.title} description={cardData.shotDescription} image={cardData.imageArray[0]} price={cardData.price} discountedPrice={cardData.discountedPrice}/>
                     })
                 }
             </div>
