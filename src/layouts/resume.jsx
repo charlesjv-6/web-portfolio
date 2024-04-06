@@ -69,7 +69,7 @@ export default function Resume(){
                 </section>
             </div>
             <footer>
-                Click this <a href="">link</a> to download a copy of my resume.
+                Click this <a href="/about">link</a> to download a copy of my resume.
             </footer>
         </section>
     );
