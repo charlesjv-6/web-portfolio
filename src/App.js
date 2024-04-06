@@ -13,36 +13,26 @@ import Policy from './pages/policy';
 function App() {
   return (
     <div className='app'>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Navigate to="/web-portfolio" />} />
-          <Route path="/web-portfolio/*" element={<AppLayout />} />
-          <Route path="*" element={<Error />} />
-        </Routes>
-      </BrowserRouter>
-    </div>
-  );
-}
-
-function AppLayout() {
-  return (
-    <div>
       <SideBar />
       <main>
-        <Routes>
-          <Route element={<Index />} path='/' index />
-          <Route element={<About />} path='/about' />
-          <Route element={<Offers />} path='/offers' />
-          <Route element={<SearchResult />} path='/search' />
-          <Route element={<Details />} path='/product-detail' />
-          <Route element={<Policy />} path='/policy' />
-          <Route element={<FAQ />} path='/faq' />
-          <Route element={<Error />} path='*' />
-        </Routes>
+        <BrowserRouter basename='web-portfolio'>
+          <Routes>
+            {/* Redirect to /web-portfolio */}
+            <Route path="/" element={<Navigate to="/web-portfolio" />} />
+            {/* Define other routes */}
+            <Route element={<Index />} path='/web-portfolio' />
+            <Route element={<About />} path='/web-portfolio/about' />
+            <Route element={<Offers />} path='/web-portfolio/offers' />
+            <Route element={<SearchResult />} path='/web-portfolio/search' />
+            <Route element={<Details />} path='/web-portfolio/product-detail' />
+            <Route element={<Policy />} path='/web-portfolio/policy' />
+            <Route element={<FAQ />} path='/web-portfolio/faq' />
+            <Route element={<Error />} path='/web-portfolio/*' />
+          </Routes>
+        </BrowserRouter>
       </main>
     </div>
   );
 }
-
 
 export default App;
