@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useNavigate } from 'react-router-dom';
 import './assets/css/style.css';
 import Index from './pages/index';
 import Error from './pages/error';
@@ -11,6 +11,9 @@ import FAQ from './pages/faq';
 import Policy from './pages/policy';
 
 function App() {
+  const navigate  = useNavigate();
+  navigate('/web-portfolio');
+
   return (
     <div className='app'><SideBar />
     <main>
