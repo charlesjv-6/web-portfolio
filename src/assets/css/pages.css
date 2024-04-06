@@ -54,3 +54,26 @@
     margin-top: 0;
     padding-top: 0;
 }
+
+/* FAQ and Policy */
+.faq, .policy {
+    color: var(--font-color);
+}
+
+.policy main, .faq section  {
+    margin: 15px;
+}
+
+.policy main h2{
+    margin-bottom: 15px;
+}
+
+.policy main ol{
+    margin: 5px 0 30px 30px;
+}
+
+.faq section {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}

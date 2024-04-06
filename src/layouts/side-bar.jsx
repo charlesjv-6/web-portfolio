@@ -38,7 +38,9 @@ export default function SideBar(){
                     <a href=""><img src={Contacts} alt="phone-icon" />Phone</a>
                     <a href=""><img src={Email} alt="email-icon" />Email</a>
                 </div>
+                <a href="/web-portfolio/faq"><img src={About} alt="about-icon" />FAQ</a>
                 <a href="/web-portfolio/about"><img src={About} alt="about-icon" />About Me</a>
+                <a href="/web-portfolio/policy"><img src={About} alt="about-icon" />Policy</a>
             </footer>
         </section>
     )
