@@ -17,7 +17,7 @@ export default function Menu({ parent, parentIcon, parentLink, child }) {
     // Update localStorage whenever isOpen state changes
     useEffect(() => {
         localStorage.setItem(`${parent}-open-state`, isOpen);
-    }, [isOpen]);
+    }, [isOpen, parent]);
 
     // Return the Menu component
     return (

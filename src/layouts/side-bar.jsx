@@ -34,9 +34,9 @@ export default function SideBar(){
             </div>
             <footer>
                 <div className="social-links">
-                    <a href=""><img src={LinkedIn} alt="linkedin-icon" />LinkedIn</a>
-                    <a href=""><img src={Contacts} alt="phone-icon" />Phone</a>
-                    <a href=""><img src={Email} alt="email-icon" />Email</a>
+                    <a href="/about"><img src={LinkedIn} alt="linkedin-icon" />LinkedIn</a>
+                    <a href="/about"><img src={Contacts} alt="phone-icon" />Phone</a>
+                    <a href="/about"><img src={Email} alt="email-icon" />Email</a>
                 </div>
                 <a href="/web-portfolio/faq"><img src={About} alt="about-icon" />FAQ</a>
                 <a href="/web-portfolio/about"><img src={About} alt="about-icon" />About Me</a>
