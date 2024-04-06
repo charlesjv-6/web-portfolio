@@ -6,8 +6,9 @@ export default function FAQContainer() {
         { question: 'Do you do refund?', answer: 'No.' },
         { question: 'Do you accept commissions?', answer: 'It depends.' },
         { question: 'who cares?', answer: 'not me' },
-        { question: 'Your questions is not listed here?', answer: 'Welp, sucks to be you.' },
+        { question: 'My question is not listed here', answer: 'Welp, sucks to be you.' },
         { question: 'How are you so handsome?', answer: 'Because...' },
+        { question: 'How do I enable light mode?', answer: 'fuck light mode.' },
     ]
     return (
         <section>
