@@ -5,7 +5,6 @@ import Error from './pages/error';
 import About from './pages/about';
 import SearchResult from './pages/search-result';
 import SideBar from './layouts/side-bar';
-import Header from './components/header';
 import Details from './pages/details';
 import Offers from './pages/offers';
 import FAQ from './pages/faq';
@@ -15,7 +14,6 @@ function App() {
   return (
     <div className='app'><SideBar />
     <main>
-      <Header headerTitle={'Home'}/>
       <BrowserRouter basename='web-portfolio'>
         <Routes>
           <Route element={<Index />} path='/' index />
