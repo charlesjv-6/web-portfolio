@@ -2,7 +2,7 @@
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://web-portfolio-qdpbuu0b9-charlesjv-6s-projects.vercel.app/",
+  "homepage": "https://web-portfolio-qdpbuu0b9-charlesjv-6s-projects.vercel.app/web-portfolio",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",

@@ -34,9 +34,9 @@ export default function SideBar(){
             </div>
             <footer>
                 <div className="social-links">
-                    <a href="/about"><img src={LinkedIn} alt="linkedin-icon" />LinkedIn</a>
-                    <a href="/about"><img src={Contacts} alt="phone-icon" />Phone</a>
-                    <a href="/about"><img src={Email} alt="email-icon" />Email</a>
+                    <a href="https://www.linkedin.com/in/charles-joseph-vendicacion-a17938273/"><img src={LinkedIn} alt="linkedin-icon" />LinkedIn</a>
+                    <a href="tel:+639217237523"><img src={Contacts} alt="phone-icon" />Phone</a>
+                    <a href="mailto:cjvendicacion@icloud.com"><img src={Email} alt="email-icon" />Email</a>
                 </div>
                 <a href="/web-portfolio/faq"><img src={About} alt="about-icon" />FAQ</a>
                 <a href="/web-portfolio/about"><img src={About} alt="about-icon" />About Me</a>
