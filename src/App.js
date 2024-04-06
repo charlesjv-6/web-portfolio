@@ -11,7 +11,6 @@ import FAQ from './pages/faq';
 import Policy from './pages/policy';
 
 function App() {
-  window.location.href = '/web-portfolio';
   return (
     <div className='app'><SideBar />
     <main>
