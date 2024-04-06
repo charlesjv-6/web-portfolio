@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import './assets/css/style.css';
 import Index from './pages/index';
 import Error from './pages/error';
@@ -12,9 +12,23 @@ import Policy from './pages/policy';
 
 function App() {
   return (
-    <div className='app'><SideBar />
-    <main>
-      <BrowserRouter basename='web-portfolio'>
+    <div className='app'>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Navigate to="/web-portfolio" />} />
+          <Route path="/web-portfolio/*" element={<AppLayout />} />
+          <Route path="*" element={<Error />} />
+        </Routes>
+      </BrowserRouter>
+    </div>
+  );
+}
+
+function AppLayout() {
+  return (
+    <div>
+      <SideBar />
+      <main>
         <Routes>
           <Route element={<Index />} path='/' index />
           <Route element={<About />} path='/about' />
@@ -25,9 +39,10 @@ function App() {
           <Route element={<FAQ />} path='/faq' />
           <Route element={<Error />} path='*' />
         </Routes>
-      </BrowserRouter>
-    </main></div>
+      </main>
+    </div>
   );
 }
+
 
 export default App;
