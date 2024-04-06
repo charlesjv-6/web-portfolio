@@ -11,9 +11,7 @@ import FAQ from './pages/faq';
 import Policy from './pages/policy';
 
 function App() {
-  const navigate  = useNavigate();
-  navigate('/web-portfolio');
-
+  window.location.href = '/web-portfolio';
   return (
     <div className='app'><SideBar />
     <main>
