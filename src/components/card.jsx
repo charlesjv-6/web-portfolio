@@ -13,7 +13,7 @@ export default  function Card({ id, title, description, image, price, discounted
 
     // handle card click
     const handleCardClick = () => {
-        window.location.href = `/web-portfolio/product-detail?id=${id}`;
+        window.location.href = `/product-detail?id=${id}`;
     }
 
     // return the card element
