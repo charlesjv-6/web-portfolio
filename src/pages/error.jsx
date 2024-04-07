@@ -6,7 +6,7 @@ export default function Error(){
         const interval = setInterval(() => {
             setProgress(prevProgress => {
                 if (prevProgress === 100) {
-                    window.location.href = '/web-portfolio';
+                    window.location.href = '/';
                 } else {
                     return prevProgress + 1; 
                 }
