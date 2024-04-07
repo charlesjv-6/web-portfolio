@@ -35,7 +35,7 @@ export default function Menu({ parent, parentIcon, parentLink, child }) {
             <ul className={isOpen ? 'open' : 'close'}>
                 {child && child.map((item, index) => (
                     <li key={index}>
-                        <a href={`/web-portfolio${item.link}`}>└─ {item.label}</a>
+                        <a href={`${item.link}`}>└─ {item.label}</a>
                     </li>
                 ))}
             </ul>
