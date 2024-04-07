@@ -22,7 +22,16 @@ export default  function Card({ id, title, description, image, price, discounted
             <header>
                 <h3>{ title.toUpperCase() }</h3>
                 { price > 0 && 
-                    <span className="price-tag"><p className={`${discountedPrice > 0 ? '' : 'hidden'}`}>{formattedPrice}</p><p>{discountedPrice > 0 ? formattedDiscountedPrice : formattedPrice}</p></span>
+                    <span className="price-tag">
+                        <p className={`${discountedPrice > 0 ? '' : 'hidden'}`}>{formattedPrice}</p>
+                        <p>{discountedPrice > 0 ? formattedDiscountedPrice : formattedPrice}</p>
+                    </span>
+                }
+                { price <= 0 &&
+                    <span className="price-tag">
+                        <p className={`${discountedPrice > 0 ? '' : 'hidden'}`}>{formattedPrice}</p>
+                        <p>FREE</p>
+                    </span>
                 }
             </header>
             <img className="max-size" src={image} alt={title} />

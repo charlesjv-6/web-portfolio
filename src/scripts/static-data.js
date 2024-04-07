@@ -271,6 +271,54 @@ const sampleData = [
         dateAdded: '2024-04-01',
         shortDescription: 'Lorem ipsum dolor sit amet'
     },
+    {
+        id: 'product-18',
+        title: 'Product 18',
+        description: '<div><h1>Welcome to Our Website</h1><p>This is a sample description of our website. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget nisi euismod, finibus eros id, mollis ex. Donec sit amet dolor ac nisi pharetra hendrerit. Duis eget augue vitae dui laoreet eleifend. Sed ac libero sit amet ipsum tempor cursus nec eu velit. Mauris posuere magna vel urna faucibus, eu pretium mauris fringilla. Sed tincidunt massa nec elit lacinia, sed placerat ex tincidunt. In hac habitasse platea dictumst. Nullam tincidunt elit at magna congue efficitur. Sed nec mi in justo hendrerit sollicitudin non eu dui. Cras consequat eros nec libero volutpat eleifend. Integer convallis nec mi eget faucibus. Vestibulum vehicula mi non nulla viverra sodales.</p></div>',
+        tags: ['SALE', 'PHP', 'Custom Website', 'Top Seller'],
+        imageArray: [
+            'https://th.bing.com/th/id/R.9f4afcb812413da17d55d5c92bd5d26d?rik=TK1g4DTU6kbK7Q&riu=http%3a%2f%2f3.bp.blogspot.com%2f-GOZUQ7w3338%2fT1_RsoYwMtI%2fAAAAAAAAEvU%2f4GXC4EAt1qY%2fs1600%2fHigh_Definition_Wallpaper_003.jpg&ehk=jLlRUfYIT0uJFLXn34HTWurF1uHOQluqt1FYLN7CyVE%3d&risl=&pid=ImgRaw&r=0',
+            'https://jooinn.com/images/lonely-tree-reflection-3.jpg',
+            'https://th.bing.com/th/id/R.38a45f948b46fb91610374867fa4b144?rik=oVzavJMnvojjfg&riu=http%3a%2f%2fwww.wallpapers-full-hd.com%2fbackgrounds%2fdandelion-picture.jpg&ehk=DUB%2f6nZOJJvxT5PcM4STX9akamcj2xW2tZl5XbONUwQ%3d&risl=&pid=ImgRaw&r=0',
+            'https://wallpapercave.com/wp/wp2356022.png',
+        ],
+        price: 0,
+        discountedPrice: 0,
+        dateAdded: '2024-04-01',
+        shortDescription: 'Lorem ipsum dolor sit amet'
+    },
+    {
+        id: 'product-19',
+        title: 'Product 19',
+        description: '<div><h1>Welcome to Our Website</h1><p>This is a sample description of our website. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget nisi euismod, finibus eros id, mollis ex. Donec sit amet dolor ac nisi pharetra hendrerit. Duis eget augue vitae dui laoreet eleifend. Sed ac libero sit amet ipsum tempor cursus nec eu velit. Mauris posuere magna vel urna faucibus, eu pretium mauris fringilla. Sed tincidunt massa nec elit lacinia, sed placerat ex tincidunt. In hac habitasse platea dictumst. Nullam tincidunt elit at magna congue efficitur. Sed nec mi in justo hendrerit sollicitudin non eu dui. Cras consequat eros nec libero volutpat eleifend. Integer convallis nec mi eget faucibus. Vestibulum vehicula mi non nulla viverra sodales.</p></div>',
+        tags: ['SALE', 'PHP', 'Custom Website', 'Top Seller'],
+        imageArray: [
+            'https://th.bing.com/th/id/R.9f4afcb812413da17d55d5c92bd5d26d?rik=TK1g4DTU6kbK7Q&riu=http%3a%2f%2f3.bp.blogspot.com%2f-GOZUQ7w3338%2fT1_RsoYwMtI%2fAAAAAAAAEvU%2f4GXC4EAt1qY%2fs1600%2fHigh_Definition_Wallpaper_003.jpg&ehk=jLlRUfYIT0uJFLXn34HTWurF1uHOQluqt1FYLN7CyVE%3d&risl=&pid=ImgRaw&r=0',
+            'https://jooinn.com/images/lonely-tree-reflection-3.jpg',
+            'https://th.bing.com/th/id/R.38a45f948b46fb91610374867fa4b144?rik=oVzavJMnvojjfg&riu=http%3a%2f%2fwww.wallpapers-full-hd.com%2fbackgrounds%2fdandelion-picture.jpg&ehk=DUB%2f6nZOJJvxT5PcM4STX9akamcj2xW2tZl5XbONUwQ%3d&risl=&pid=ImgRaw&r=0',
+            'https://wallpapercave.com/wp/wp2356022.png',
+        ],
+        price: 0,
+        discountedPrice: 0,
+        dateAdded: '2024-04-01',
+        shortDescription: 'Lorem ipsum dolor sit amet'
+    },
+    {
+        id: 'product-20',
+        title: 'Product 20',
+        description: '<div><h1>Welcome to Our Website</h1><p>This is a sample description of our website. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget nisi euismod, finibus eros id, mollis ex. Donec sit amet dolor ac nisi pharetra hendrerit. Duis eget augue vitae dui laoreet eleifend. Sed ac libero sit amet ipsum tempor cursus nec eu velit. Mauris posuere magna vel urna faucibus, eu pretium mauris fringilla. Sed tincidunt massa nec elit lacinia, sed placerat ex tincidunt. In hac habitasse platea dictumst. Nullam tincidunt elit at magna congue efficitur. Sed nec mi in justo hendrerit sollicitudin non eu dui. Cras consequat eros nec libero volutpat eleifend. Integer convallis nec mi eget faucibus. Vestibulum vehicula mi non nulla viverra sodales.</p></div>',
+        tags: ['SALE', 'PHP', 'Custom Website', 'Top Seller'],
+        imageArray: [
+            'https://th.bing.com/th/id/R.9f4afcb812413da17d55d5c92bd5d26d?rik=TK1g4DTU6kbK7Q&riu=http%3a%2f%2f3.bp.blogspot.com%2f-GOZUQ7w3338%2fT1_RsoYwMtI%2fAAAAAAAAEvU%2f4GXC4EAt1qY%2fs1600%2fHigh_Definition_Wallpaper_003.jpg&ehk=jLlRUfYIT0uJFLXn34HTWurF1uHOQluqt1FYLN7CyVE%3d&risl=&pid=ImgRaw&r=0',
+            'https://jooinn.com/images/lonely-tree-reflection-3.jpg',
+            'https://th.bing.com/th/id/R.38a45f948b46fb91610374867fa4b144?rik=oVzavJMnvojjfg&riu=http%3a%2f%2fwww.wallpapers-full-hd.com%2fbackgrounds%2fdandelion-picture.jpg&ehk=DUB%2f6nZOJJvxT5PcM4STX9akamcj2xW2tZl5XbONUwQ%3d&risl=&pid=ImgRaw&r=0',
+            'https://wallpapercave.com/wp/wp2356022.png',
+        ],
+        price: 0,
+        discountedPrice: 0,
+        dateAdded: '2024-04-01',
+        shortDescription: 'Lorem ipsum dolor sit amet'
+    },
 ];
 
 const imageArray = [
