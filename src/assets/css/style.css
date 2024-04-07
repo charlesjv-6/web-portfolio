@@ -48,6 +48,15 @@ input {
     height: 100%;
 }
 
+.paragraph {
+    color: var(--primary);
+    padding: 15px;
+}
+
+.center-align-text {
+    text-align: center;
+}
+
 .separator-vertical {
     height: 100%;
     width: 1px;

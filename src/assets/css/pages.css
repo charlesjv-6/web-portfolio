@@ -27,6 +27,16 @@
 
 /* index */
 
+.poem-container {
+    padding: 15px;
+    margin: auto;
+    color: var(--font-color);
+}
+
+.poem-container .poem {
+    text-align: center;
+    font-style: italic;
+}
 
 /* details */
 

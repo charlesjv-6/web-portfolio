@@ -209,6 +209,11 @@
 
 /* related */
 
+.related h1 {
+    margin-top: 10px;
+    padding: 15px 0;
+}
+
 .related h2 {
     margin-top: 10px;
     padding: 15px 0;
