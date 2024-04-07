@@ -23,7 +23,7 @@ export default function DetailContainer({ product }){
                             <p style={{backgroundColor: 'var(--price)'}}>{formattedPrice}</p>
                             {
                                 tags.map(tag => {
-                                    return <p>{ tag.toUpperCase() }</p>
+                                    return <a href={`/search?query=${tag}`}><p>{ tag.toUpperCase() }</p></a>
                                 })
                             }
                         </span>

@@ -11,14 +11,19 @@ export default function SearchResult(){
     const filterKeyword = new URLSearchParams(search).get('filter-keyword');
     const [filter, setFilter] = useState('');
 
+    const highestPrice = sampleData.reduce((maxPrice, product) => {
+        return Math.max(maxPrice, product.price);
+    }, 0);
+
+    const [priceRange, setPriceRange] = useState(highestPrice / 2)
+
     useEffect(()=> {
         setFilter(query ?? filterKeyword);
     }, [query, filterKeyword]);
 
-    const highestPrice = sampleData.reduce((maxPrice, product) => {
-        // Compare the current product's price with the current maximum price
-        return Math.max(maxPrice, product.price);
-    }, 0);
+    const handleRangeChange = (value)=> {
+        setPriceRange(value);
+    }
     
     const results = filter && sampleData.filter(data => {
         // Convert price and discountedPrice to strings before comparison
@@ -27,12 +32,13 @@ export default function SearchResult(){
         
         // Check if any property includes the query
         return (
-            data.title.toLowerCase().includes(filter.toLowerCase()) ||
+            (data.title.toLowerCase().includes(filter.toLowerCase()) ||
             data.description.toLowerCase().includes(filter.toLowerCase()) ||
             data.tags.find(tag => tag.toLowerCase().includes(filter.toLowerCase())) ||
             data.shortDescription.toLowerCase().includes(filter.toLowerCase()) ||
             priceStr === filter ||
-            discountedPriceStr === filter
+            discountedPriceStr === filter) &&
+            (data.price <= priceRange || (data.discountedPrice > 0 && data.discountedPrice <= priceRange))
         );  
     });
 
@@ -48,6 +54,7 @@ export default function SearchResult(){
     return (
         <section className='search-result'>
             <Header headerTitle={'Search Result'} searchValue={query}/>
+            <Filter filters={sampleFilters} onSubmit={(keyword) => setFilter(keyword)} onChange={(value)=> handleRangeChange(value)}/>
             { !results.length > 0 && 
                 <div className='empty-result'>
                     <span className='search-query'>'{query}'</span>
@@ -55,7 +62,7 @@ export default function SearchResult(){
                 </div>
             }
             { results && results.length > 0 &&
-                <><Filter filters={sampleFilters} onSubmit={(keyword) => setFilter(keyword)} /><CardContainer cardDataArray={results} /></>
+                <CardContainer cardDataArray={results} />
             }
         </section>
     );

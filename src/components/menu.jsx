@@ -46,7 +46,6 @@ export default function Menu({ parent, parentIcon, parentLink, child }) {
 // define the props type
 Menu.propTypes = {
     parent: PropTypes.string.isRequired,
-    parentIcon: PropTypes.element,
     parentLink: PropTypes.string,
     child: PropTypes.arrayOf(
         PropTypes.shape({

@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 
-export default function Range({ name, index, max }) {
+export default function Range({ name, index, max, onChange }) {
     const [value, setValue] = useState(max / 2); // Initial value for the range input
 
     // Handle change in the range input
     const handleRangeChange = (event) => {
         setValue(event.target.value);
+        onChange(value);
     };
 
     // Return the Range component
@@ -30,6 +31,7 @@ export default function Range({ name, index, max }) {
 
 // Define prop types
 Range.propTypes = {
+    onChange: PropTypes.func.isRequired,
     name: PropTypes.string.isRequired,
     index: PropTypes.number.isRequired,
 };

@@ -198,6 +198,15 @@
     padding: 0 10px;
 }
 
+.details a {
+    text-decoration: none;
+    color: var(--primary);
+}
+
+.details a:visited {
+    color: var(--primary);
+}
+
 /* related */
 
 .related h2 {
