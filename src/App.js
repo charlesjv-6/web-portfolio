@@ -12,10 +12,10 @@ import FAQ from './pages/faq';
 import Policy from './pages/policy';
 
 function App() {
-  const [isMobile, setIsMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
   useEffect(()=> setIsMobile(window.innerWidth <= 768), [])
 
-  return isMobile ? (
+  return !isMobile ? (
     <div className='app'><SideBar />
     <main>
       <BrowserRouter>
