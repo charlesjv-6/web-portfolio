@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './assets/css/style.css';
 import Index from './pages/index';
@@ -11,10 +12,13 @@ import FAQ from './pages/faq';
 import Policy from './pages/policy';
 
 function App() {
-  return (
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(()=> setIsMobile(window.innerWidth <= 768), [])
+
+  return isMobile ? (
     <div className='app'><SideBar />
     <main>
-      <BrowserRouter basename='web-portfolio'>
+      <BrowserRouter>
         <Routes>
           <Route element={<Index />} path='/' index />
           <Route element={<About />} path='/about' />
@@ -27,7 +31,7 @@ function App() {
         </Routes>
       </BrowserRouter>
     </main></div>
-  );
+  ) : <p>Sorry, this website is not available on your device yet.</p> ;
 }
 
 export default App;
